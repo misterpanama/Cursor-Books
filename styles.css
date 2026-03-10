@@ -1,70 +1,38 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
-  min-height: 100vh;
-  font-family: "Courier New", Courier, monospace;
-  background: linear-gradient(160deg, #120f24 0%, #1a1431 45%, #2e1c3e 100%);
-  color: #f4efe6;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  font-size: 11pt;
+  line-height: 1.15;
 }
 
-.page {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem 1rem;
+.doc {
+  margin: 0 auto;
+  max-width: 468pt;
+  padding: 72pt;
 }
 
-.card {
-  width: min(680px, 100%);
-  background: rgba(12, 10, 21, 0.8);
-  border: 1px solid rgba(244, 239, 230, 0.2);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+.doc p {
+  margin: 0 0 24pt;
 }
 
-.header {
-  margin-bottom: 1.5rem;
-}
-
-.eyebrow {
-  margin: 0 0 0.5rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #f8b66a;
-}
-
-h1 {
-  margin: 0;
-  font-size: clamp(2rem, 5vw, 3rem);
-  line-height: 1.1;
-}
-
-.copy p {
-  margin: 0 0 1rem;
-  line-height: 1.65;
-  color: #efe7da;
-}
-
-.copy p:last-child {
+.doc p:last-child {
   margin-bottom: 0;
 }
 
 a {
-  color: #f8b66a;
+  color: #1155cc;
+  text-decoration: underline;
 }
 
-a:hover,
-a:focus-visible {
-  color: #ffd4a0;
-}
+@media (max-width: 800px) {
+  .doc {
+    max-width: none;
+    padding: 24px 16px;
+  }
 
-@media (max-width: 600px) {
-  .card {
-    padding: 1.5rem;
+  .doc p {
+    margin-bottom: 16px;
   }
 }
