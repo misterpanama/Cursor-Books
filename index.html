@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Reading List</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">Reading tracker</p>
+        <h1><span id="current-year">This year</span>, in books</h1>
+        <p class="subtitle">
+          A minimalist snapshot of what I have read and what I am reading now.
+        </p>
+      </header>
+
+      <section class="current" aria-labelledby="current-book-heading">
+        <h2 id="current-book-heading">Currently reading</h2>
+        <article class="current-card">
+          <figure class="book-cover" aria-label="Cover for One Boat by Jonathan Buckley">
+            <div class="cover-top">ONE BOAT</div>
+            <div class="cover-bottom">JONATHAN BUCKLEY</div>
+          </figure>
+          <div class="current-details">
+            <p class="status-dot">In progress</p>
+            <h3>One Boat</h3>
+            <p>Jonathan Buckley</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="history" aria-labelledby="read-books-heading">
+        <div class="history-head">
+          <h2 id="read-books-heading">Books read this year</h2>
+          <p><strong id="book-count">3</strong> finished</p>
+        </div>
+        <ol class="book-list">
+          <li>
+            <p class="title">Perfection</p>
+            <p class="author">Vincenzo Latronico</p>
+          </li>
+          <li>
+            <p class="title">Stoner</p>
+            <p class="author">John Williams</p>
+          </li>
+          <li>
+            <p class="title">Practical Reason</p>
+            <p class="author">Pierre Bourdieu</p>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <script>
+      const yearElement = document.getElementById("current-year");
+      const countElement = document.getElementById("book-count");
+      const listItems = document.querySelectorAll(".book-list li");
+
+      yearElement.textContent = `${new Date().getFullYear()}`;
+      countElement.textContent = listItems.length;
+    </script>
+  </body>
+</html>

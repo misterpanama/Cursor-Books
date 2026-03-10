@@ -1,0 +1,189 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f6f3;
+  --surface: #fffefc;
+  --ink: #151515;
+  --muted: #66625c;
+  --accent: #113e66;
+  --accent-soft: #dce8f2;
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #ffffff 0%, var(--bg) 42%);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  width: min(940px, 100% - 2rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3.5vw, 3rem) 0 3rem;
+}
+
+.intro {
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4.8vw, 3rem);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0.8rem 0 0;
+  max-width: 56ch;
+  color: var(--muted);
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid #ebe8e2;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1rem, 3vw, 1.6rem);
+}
+
+section + section {
+  margin-top: 1rem;
+}
+
+h2 {
+  margin: 0 0 0.95rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.current-card {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+.book-cover {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  max-height: 68vh;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(165deg, #315e84 0%, #1f4160 50%, #0f2235 100%);
+  color: #fefefe;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.2);
+}
+
+.cover-top,
+.cover-bottom {
+  padding: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.cover-top {
+  font-size: clamp(1.3rem, 6.8vw, 2.5rem);
+  line-height: 1.05;
+}
+
+.cover-bottom {
+  align-self: flex-end;
+  text-align: right;
+  font-size: clamp(0.72rem, 3.2vw, 1rem);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.current-details h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4.8vw, 2rem);
+}
+
+.current-details p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-dot::before {
+  content: "";
+  width: 0.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.history-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.history-head p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.book-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.book-list li {
+  margin: 0.65rem 0;
+  padding-left: 0.25rem;
+}
+
+.title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.author {
+  margin: 0.15rem 0 0;
+  color: var(--muted);
+}
+
+@media (min-width: 740px) {
+  .current-card {
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 1.5rem;
+  }
+
+  .book-cover {
+    max-height: none;
+  }
+}
