@@ -1,0 +1,55 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 760 700"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">Good Girl logo</title>
+  <desc id="desc">Good Girl text in a blackletter-inspired style with a heart pin.</desc>
+  <style>
+    .word {
+      fill: #ffffff;
+      font-family: "UnifrakturCook", "Old English Text MT", serif;
+      font-weight: 700;
+      font-size: 235px;
+    }
+
+    .pin {
+      fill: none;
+      stroke: #ffffff;
+      stroke-linecap: round;
+      stroke-width: 5;
+    }
+
+    .heart {
+      fill: #ffffff;
+    }
+  </style>
+
+  <text class="word" x="36" y="265">Good</text>
+  <text class="word" x="36" y="510">Girl</text>
+
+  <path class="pin" d="M610 590 L705 400" />
+  <circle class="pin" cx="706" cy="395" r="14" />
+
+  <path
+    class="heart"
+    d="M622 484
+       C622 468 635 456 648 456
+       C658 456 666 462 671 471
+       C676 462 684 456 694 456
+       C707 456 720 468 720 484
+       C720 506 697 522 671 542
+       C645 522 622 506 622 484 Z"
+  />
+  <path
+    class="heart"
+    d="M552 544
+       C552 528 565 516 578 516
+       C588 516 596 522 601 531
+       C606 522 614 516 624 516
+       C637 516 650 528 650 544
+       C650 566 627 582 601 602
+       C575 582 552 566 552 544 Z"
+  />
+</svg>
